@@ -1,0 +1,276 @@
+<html>
+<head>
+<title>*teapo*</title>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta charset=utf-8 />
+
+<link rel=stylesheet href=imports/CodeMirror/codemirror.css></link>
+<link rel=stylesheet href=imports/CodeMirror/show-hint.css></link>
+
+<script src=imports/typescript/typescriptServices.js></script>
+<script id=lib.d.ts type=text/typescript>some</script>
+<script src=imports/CodeMirror/codemirror.js></script>
+<script src=imports/CodeMirror/show-hint.js></script>
+<script src=imports/CodeMirror/active-line.js></script>
+<script src=imports/CodeMirror/javascript.js></script>
+<script src=imports/CodeMirror/closebrackets.js></script>
+<script src=imports/CodeMirror/matchbrackets.js></script>
+<script src=imports/CodeMirror/comment.js></script>
+<script src=imports/CodeMirror/continuecomment.js></script>
+<script src=imports/CodeMirror/trailingspace.js></script>
+<script src=teapo.js></script>
+
+<style>
+html, body {
+    margin: 0px; padding: 0px;
+	height: 100%;
+}
+
+html {
+	overflow: auto;
+}
+
+.CodeMirror {
+    height: 100%;
+    font-family: auto;
+}
+
+.CodeMirror-activeline-background {
+    background: rgb(240, 240, 240);
+}
+
+.cm-trailingspace {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QUXCToH00Y1UgAAACFJREFUCNdjPMDBUc/AwNDAAAFMTAwMDA0OP34wQgX/AQBYgwYEx4f9lQAAAABJRU5ErkJggg==);
+    background-position: bottom left;
+    background-repeat: repeat-x;
+}
+
+.teapo-box {
+	-moz-box-sizing: border-box;
+	-khtml-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.teapo-layout-content {
+	position: absolute;
+    left: 0px; top: 0px;
+    width: 100%;
+    height: 100%;
+    border-top: solid 23px white;
+    border-left: solid 200px white;
+    border-right: solid 150px white;
+    border-bottom: solid 16px white;
+    z-index: 1;
+    overflow: none;
+}  
+
+.teapo-layout-top {
+	position: absolute;
+	left: 0px; top: 0px;
+	height: 23px;
+    width: 100%;
+    z-index: 3;
+}
+
+.teapo-layout-bottom {
+	position: absolute;
+	left: 0px; bottom: 0px;
+	height: 16px;
+    width: 100%;
+    z-index: 3;
+}
+
+.teapo-layout-left {
+	position: absolute;
+    left: 0px; top: 0px;
+    width: 200px;
+    height: 100%;
+    border-top: solid 23px white;
+    border-bottom: solid 16px white;
+    z-index: 2;
+}
+
+.teapo-layout-right {
+	position: absolute;
+    right: 0px; top: 0px;
+    width: 150px;
+    height: 100%;
+    border-top: solid 23px white;
+    border-bottom: solid 16px white;
+    z-index: 2;
+}
+
+.teapo-toolbar {
+	overflow: hidden;
+}
+
+.teapo-statusBar {
+	overflow: hidden;
+}
+
+.teapo-navigator {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.teapo-textarea {
+	width: 100%;
+	height: 100%;
+	padding: 0px; margin: 0px;
+	overflow: auto;
+	border: none;
+	font: inherit;
+	resize: none;
+}
+
+.teapo-details-panel {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.teapo-navigator-script {
+    cursor: pointer;
+    margin: 1px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.teapo-navigator-script-selected {
+    cursor: default;
+    background: cornflowerblue;
+    color: white;
+}
+
+
+</style>
+
+<link rel=stylesheet href=theme.css>
+
+<script title='saved' type=save>2013-Jul-3</script>
+<script title='selected' type=save>/main.ts</script>
+<script title='/main.ts' type=save>/// <reference path='Apple.ts' />
+
+var redApple = new Apple();
+console.log(redApple.color);
+
+var greenApple = new Apple('green');
+console.log(greenApple.color);
+
+
+</script>
+<script title='/Apple.ts' type=save>
+class Apple {
+    constructor(public color: string = 'red') {
+    }
+}    
+</script>
+<script title='/lib.d.ts' type=save>
+
+declare function alert(text): void;
+
+declare var console: {
+    log: (text) => void;
+};
+
+interface HTMLElement {
+    textContent: string;
+    innerText: string;
+    innerHTML: string;
+    tagName: string;
+    className: string;
+    style: any;
+
+    appendChild(element: HTMLElement): void;
+    removeChild(element: HTMLElement): void;
+}
+
+declare var window: Window;
+declare var document: Document;
+
+interface Window {
+    document: Document;
+    console: { log: (text) => void; }
+    alert(text): void;
+}
+
+interface Document {
+    window: Window;
+    body: HTMLElement;
+    createElement(tagName: string): HTMLElement;
+}
+
+</script>
+
+</head>
+<body>
+
+<div class="teapo-box teapo-layout-top teapo-toolbar" id="teapo-toolbar-638">
+  toolbar
+</div>
+
+<div class="teapo-box teapo-layout-left">
+<div class="teapo-box teapo-navigator" id="teapo-navigator-876">
+</div>
+</div>
+  
+<div class="teapo-box teapo-layout-content">
+  <textarea class="teapo-textarea" id="teapo-textarea-0293"></textarea>
+</div>
+
+<div class="teapo-box teapo-layout-right">
+<div class="teapo-box teapo-details-panel" id="teapo-details-panel-747">
+
+	details
+
+</div>
+</div>
+  
+<div class="teapo-box teapo-layout-bottom teapo-statusBar" id="teapo-statusBar-972">
+  ok
+</div>
+
+<script>
+var removeFakeNodeEnvironment = teapo.tscNode.install();
+</script>
+<script src=imports/typescript/tsc.js></script>
+<script>
+removeFakeNodeEnvironment();
+</script>
+
+<script>
+
+//var editor = new teapo.Editor();
+var layout = {};
+var elements = teapo.layout.createLayout(layout);
+
+var removeElements = [];
+var firstChild = null;
+for (var i = 0; i < document.body.childNodes.length; i++) {
+    var element = document.body.childNodes.item(i);
+    if (element.tagName) {
+        if (element.tagName.toLowerCase()==='div')
+            removeElements.push(element);
+        else if (!firstChild)
+            firstChild = element;
+    }
+}
+
+for (var i = 0; i < removeElements.length; i++) {
+    document.body.removeChild(removeElements[i]);
+}
+
+for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
+    document.body.insertBefore(element, firstChild);
+}
+
+var editor = new teapo.Editor(layout.toolbar, layout.navigator, layout.content);
+
+</script>
+
+</body>
+</html>

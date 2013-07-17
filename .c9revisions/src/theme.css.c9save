@@ -1,0 +1,2 @@
+{"ts":1374102798345,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1374103028619,"patch":[[{"diffs":[[1,".mie-toolbar {\n    background: silver;\n}\n\n.mie-statusBar {\n    background: silver;\n    font-size: 12px;\n}\n  \n.mie-navigator {\n    background: gold;\n}\n\n.mie-details-panel {\n    background: tomato;\n}\n\n.mie-content-area {\n    background: white;\n}\n"]],"start1":0,"start2":0,"length1":0,"length2":244}]],"length":244,"saved":false}

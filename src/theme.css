@@ -1,0 +1,20 @@
+.mie-toolbar {
+    background: silver;
+}
+
+.mie-statusBar {
+    background: silver;
+    font-size: 12px;
+}
+  
+.mie-navigator {
+    background: gold;
+}
+
+.mie-details-panel {
+    background: tomato;
+}
+
+.mie-content-area {
+    background: white;
+}
